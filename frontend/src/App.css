@@ -1,0 +1,426 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7f5;
+  color: #1d3027;
+}
+
+.navbar {
+  background: #123d2c;
+  color: white;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 27px;
+}
+
+.navbar h2 span {
+  color: #7ee0a2;
+}
+
+.navbar p {
+  margin: 0;
+  color: #d0e5d7;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 45px 24px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.tag {
+  color: #218052;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  margin: 16px 0;
+}
+
+.hero p {
+  color: #66766d;
+  line-height: 1.6;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 25px;
+}
+
+.panel {
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.subtext {
+  color: #7a8980;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 17px 0 8px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d8e2db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+}
+
+input:focus, select:focus {
+  outline: 2px solid #4aa878;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 15px;
+}
+
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px;
+  background: #176b43;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #105334;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.result-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty {
+  text-align: center;
+  margin: auto;
+  padding: 35px 10px;
+}
+
+.symbol {
+  font-size: 65px;
+  color: #27915d;
+}
+
+.empty p {
+  color: #829087;
+  line-height: 1.5;
+}
+
+.result {
+  background: #eff8f1;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 15px;
+}
+
+.result-label {
+  color: #52705e;
+  font-size: 13px;
+}
+
+.result h1 {
+  font-size: 48px;
+  color: #176b43;
+  margin: 15px 0;
+}
+
+.result h1 small {
+  font-size: 20px;
+}
+
+.notice {
+  background: #fff7e5;
+  padding: 12px;
+  border-radius: 7px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.error {
+  color: #c62828;
+  background: #fff0f0;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  color: #87948b;
+  font-size: 13px;
+  margin-top: 45px;
+}
+
+@media (max-width: 750px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+}
+
+/* BioGrip+ Dashboard */
+
+.analytics-section,
+.history-section {
+  margin-top: 65px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.section-heading p {
+  color: #718078;
+  font-size: 16px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e8eee9;
+}
+
+.stat-card p {
+  color: #718078;
+  font-size: 15px;
+}
+
+.stat-card h2 {
+  font-size: 30px;
+  color: #16764d;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+.stat-card span {
+  font-size: 13px;
+  color: #87928b;
+}
+
+.analytics-panel,
+.history-panel {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e8eee9;
+}
+
+.panel-heading,
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.panel-heading h2,
+.history-header h2 {
+  margin-bottom: 8px;
+}
+
+.chart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.chart-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 110px;
+  align-items: center;
+  gap: 18px;
+}
+
+.chart-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.chart-label span {
+  color: #89938d;
+  font-size: 12px;
+}
+
+.bar-background {
+  height: 13px;
+  background: #edf2ee;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #168451, #66bd8c);
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.chart-value {
+  color: #16764d;
+  text-align: right;
+  font-size: 14px;
+}
+
+.chart-note {
+  color: #89938d;
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+.refresh-button {
+  width: auto;
+  padding: 11px 18px;
+  margin: 0;
+  background: #16764d;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.refresh-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+  font-size: 13px;
+}
+
+.history-table th {
+  background: #eef5f0;
+  color: #24563e;
+  padding: 15px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.history-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #edf0ed;
+  white-space: nowrap;
+}
+
+.history-table tbody tr:hover {
+  background: #f7faf7;
+}
+
+.force-cell {
+  color: #16764d;
+  font-weight: bold;
+}
+
+.history-header button:hover {
+  background: #105d3b;
+}
+
+@media (max-width: 850px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-row {
+    grid-template-columns: 110px 1fr;
+  }
+
+  .chart-value {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .history-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  .analytics-panel,
+  .history-panel {
+    padding: 18px;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+}
